@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home.LLC Interview Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Home.LLC Interview Assistant</h1>
+            <p class="subtitle">Your AI-powered interview preparation tool</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="chat-section">
+                <div id="chat-container"></div>
+                
+                <div class="controls">
+                    <div class="voice-control">
+                        <button id="mic-btn" class="icon-btn mic">
+                            <span>🎤</span> Start Speaking
+                        </button>
+                        <button id="stop-btn" class="icon-btn stop">
+                            <span>⏹️</span> Stop Response
+                        </button>
+                    </div>
+                    
+                    <div class="sample-questions">
+                        <p>Try sample questions:</p>
+                        <button data-question="What should we know about your life story?">Life Story</button>
+                        <button data-question="What's your #1 superpower?">Superpower</button>
+                        <button data-question="What are your top growth areas?">Growth Areas</button>
+                        <button data-question="How do you push your boundaries?">Pushing Boundaries</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="config-section">
+                <h2 class="config-title">API Configuration</h2>
+                
+                <div class="api-provider">
+                    <label>Select AI Provider:</label>
+                    <div class="provider-select">
+                        <div class="provider-card" data-provider="openai">
+                            <div class="provider-logo">🤖</div>
+                            <h3>OpenAI</h3>
+                            <p>GPT-3.5 or GPT-4</p>
+                        </div>
+                        <div class="provider-card" data-provider="deepseek">
+                            <div class="provider-logo">🧠</div>
+                            <h3>DeepSeek</h3>
+                            <p>Free alternative</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="api-key-container">
+                    <label for="api-key-input">Enter API Key:</label>
+                    <input type="password" id="api-key-input" placeholder="Enter your API key...">
+                    <button id="save-key-btn">Save API Key</button>
+                    <div class="status" id="key-status">No API key saved</div>
+                </div>
+                
+                <div class="instructions">
+                    <h3>How to get API keys:</h3>
+                    <ul>
+                        <li><strong>OpenAI:</strong> Visit <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com</a></li>
+                        <li><strong>DeepSeek:</strong> Visit <a href="https://platform.deepseek.com/api_keys" target="_blank">platform.deepseek.com</a></li>
+                        <li>Your key is stored locally in your browser only</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
